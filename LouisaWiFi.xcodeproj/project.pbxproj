@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02434941F0C1B871BC109488 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E96ADE52E35A673DCBE6C /* Store.swift */; };
+		090831D70603A1175E11C808 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849C68CF9E1E4E73C15447C /* ConnectView.swift */; };
+		0A387B5C657EECC3CA6A49A2 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401602D6FD9159D319A57A6E /* StatsView.swift */; };
+		5553B0B0016F948EE9BC66AB /* HeatmapGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E29BF73BBD99339291E88 /* HeatmapGridView.swift */; };
+		77EFF4A1C504C267ADE4DBBD /* LouisaIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8431FE9BE7B47350C0A6E3 /* LouisaIntents.swift */; };
+		80FF30F81A9D8EA2843EE8F4 /* LouisaWiFiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CEDDA17C6D52914E93BEC /* LouisaWiFiApp.swift */; };
+		8407C725C92A0F984B90983C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71512E9DC46D251DF5AEFD4B /* Assets.xcassets */; };
+		92F36B95D9E2CC749341D92D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116A1F5433599519D7DFDBD /* SettingsView.swift */; };
+		96A3DC03AAA5FCA4373EC735 /* LearnedStoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3746105CFB6F40EEC835013 /* LearnedStoreCache.swift */; };
+		9FF7A24211D1EA69AD7876F9 /* WiFiQRCodeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC630F935DA873ABCF56F6 /* WiFiQRCodeModal.swift */; };
+		CA34721DCF4F2759DEED8FAB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF1B5A94F9448D95BA1678 /* MainTabView.swift */; };
+		CC073A95D1E4F9E5E7E76374 /* StoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB105D8BE92C243B7C9A7F4 /* StoreRepository.swift */; };
+		E5ED6D9E8F104A3825585E66 /* UsageTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2400FCACB99CBE967A61328B /* UsageTracker.swift */; };
+		E8032DA099A5D56FD341A143 /* StoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E7B9B082F17D9E1FA2B994 /* StoreListView.swift */; };
+		E83EECD957A5F84E4C12B881 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E4A5393E63F3ABCD9C1DF /* LocationManager.swift */; };
+		EB6B90E37A87BA503E7B7451 /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 72E125435FBB71AD9FD97AF3 /* stores.json */; };
+		F4F6D715F2A52F3EC27016B3 /* StoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524A4F02FE5851A2EDBC25B /* StoreCardView.swift */; };
+		FA980AC35CB56214FEBDCA2A /* WiFiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7838DDB8E68C491516CFBF /* WiFiConnector.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		041E4A5393E63F3ABCD9C1DF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		17AF1B5A94F9448D95BA1678 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		1AB76E9B034298ED24D092D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2400FCACB99CBE967A61328B /* UsageTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageTracker.swift; sourceTree = "<group>"; };
+		3E5E29BF73BBD99339291E88 /* HeatmapGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapGridView.swift; sourceTree = "<group>"; };
+		401602D6FD9159D319A57A6E /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		4B703F6C0BE0F082131A3CB5 /* LouisaWiFi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LouisaWiFi.entitlements; sourceTree = "<group>"; };
+		51E7B9B082F17D9E1FA2B994 /* StoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListView.swift; sourceTree = "<group>"; };
+		5A2CEDDA17C6D52914E93BEC /* LouisaWiFiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LouisaWiFiApp.swift; sourceTree = "<group>"; };
+		613E96ADE52E35A673DCBE6C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		71512E9DC46D251DF5AEFD4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72E125435FBB71AD9FD97AF3 /* stores.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
+		7EB105D8BE92C243B7C9A7F4 /* StoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRepository.swift; sourceTree = "<group>"; };
+		92DC630F935DA873ABCF56F6 /* WiFiQRCodeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiQRCodeModal.swift; sourceTree = "<group>"; };
+		9849C68CF9E1E4E73C15447C /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		B3746105CFB6F40EEC835013 /* LearnedStoreCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedStoreCache.swift; sourceTree = "<group>"; };
+		BE8431FE9BE7B47350C0A6E3 /* LouisaIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LouisaIntents.swift; sourceTree = "<group>"; };
+		C116A1F5433599519D7DFDBD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C524A4F02FE5851A2EDBC25B /* StoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCardView.swift; sourceTree = "<group>"; };
+		C5B636B78385570DD1CDF11E /* Louisa Wi-Fi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Louisa Wi-Fi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7838DDB8E68C491516CFBF /* WiFiConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiConnector.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		10587529E540DF4B0A93F3CB = {
+			isa = PBXGroup;
+			children = (
+				536A60ACA50E4868FD5CB3F6 /* LouisaWiFi */,
+				4489301EFA9777DFF4D1606F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21BD38740CDCDEF9F83AAC8A /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				BE8431FE9BE7B47350C0A6E3 /* LouisaIntents.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		2CE8365DB7FF0266853A19A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71512E9DC46D251DF5AEFD4B /* Assets.xcassets */,
+				1AB76E9B034298ED24D092D8 /* Info.plist */,
+				4B703F6C0BE0F082131A3CB5 /* LouisaWiFi.entitlements */,
+				72E125435FBB71AD9FD97AF3 /* stores.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4489301EFA9777DFF4D1606F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5B636B78385570DD1CDF11E /* Louisa Wi-Fi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		536A60ACA50E4868FD5CB3F6 /* LouisaWiFi */ = {
+			isa = PBXGroup;
+			children = (
+				E06033D1591165ABB6714325 /* App */,
+				21BD38740CDCDEF9F83AAC8A /* Intents */,
+				F61A56B64834101C7AFFB3FA /* Models */,
+				2CE8365DB7FF0266853A19A0 /* Resources */,
+				61551BB03B30CA265590E154 /* Services */,
+				C84C09D598EC5C847E3DFF97 /* Views */,
+			);
+			path = LouisaWiFi;
+			sourceTree = "<group>";
+		};
+		61551BB03B30CA265590E154 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				041E4A5393E63F3ABCD9C1DF /* LocationManager.swift */,
+				7EB105D8BE92C243B7C9A7F4 /* StoreRepository.swift */,
+				CB7838DDB8E68C491516CFBF /* WiFiConnector.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B635A2F93221A64D272CA5A4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E29BF73BBD99339291E88 /* HeatmapGridView.swift */,
+				C524A4F02FE5851A2EDBC25B /* StoreCardView.swift */,
+				92DC630F935DA873ABCF56F6 /* WiFiQRCodeModal.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C84C09D598EC5C847E3DFF97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9849C68CF9E1E4E73C15447C /* ConnectView.swift */,
+				17AF1B5A94F9448D95BA1678 /* MainTabView.swift */,
+				C116A1F5433599519D7DFDBD /* SettingsView.swift */,
+				401602D6FD9159D319A57A6E /* StatsView.swift */,
+				51E7B9B082F17D9E1FA2B994 /* StoreListView.swift */,
+				B635A2F93221A64D272CA5A4 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E06033D1591165ABB6714325 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5A2CEDDA17C6D52914E93BEC /* LouisaWiFiApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F61A56B64834101C7AFFB3FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3746105CFB6F40EEC835013 /* LearnedStoreCache.swift */,
+				613E96ADE52E35A673DCBE6C /* Store.swift */,
+				2400FCACB99CBE967A61328B /* UsageTracker.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE336CA79022B0246933A2F8 /* LouisaWiFi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 861F9A4A27F68F695FA02406 /* Build configuration list for PBXNativeTarget "LouisaWiFi" */;
+			buildPhases = (
+				373EC0380C2D54AFA26AFACB /* Sources */,
+				236B9600FB93FE0224C691D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LouisaWiFi;
+			packageProductDependencies = (
+			);
+			productName = LouisaWiFi;
+			productReference = C5B636B78385570DD1CDF11E /* Louisa Wi-Fi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20FB9A6F7C33EF1CFF5A441C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FE336CA79022B0246933A2F8 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 56E2D55018EFC45C8103838C /* Build configuration list for PBXProject "LouisaWiFi" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 10587529E540DF4B0A93F3CB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4489301EFA9777DFF4D1606F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE336CA79022B0246933A2F8 /* LouisaWiFi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		236B9600FB93FE0224C691D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8407C725C92A0F984B90983C /* Assets.xcassets in Resources */,
+				EB6B90E37A87BA503E7B7451 /* stores.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		373EC0380C2D54AFA26AFACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090831D70603A1175E11C808 /* ConnectView.swift in Sources */,
+				5553B0B0016F948EE9BC66AB /* HeatmapGridView.swift in Sources */,
+				96A3DC03AAA5FCA4373EC735 /* LearnedStoreCache.swift in Sources */,
+				E83EECD957A5F84E4C12B881 /* LocationManager.swift in Sources */,
+				77EFF4A1C504C267ADE4DBBD /* LouisaIntents.swift in Sources */,
+				80FF30F81A9D8EA2843EE8F4 /* LouisaWiFiApp.swift in Sources */,
+				CA34721DCF4F2759DEED8FAB /* MainTabView.swift in Sources */,
+				92F36B95D9E2CC749341D92D /* SettingsView.swift in Sources */,
+				0A387B5C657EECC3CA6A49A2 /* StatsView.swift in Sources */,
+				02434941F0C1B871BC109488 /* Store.swift in Sources */,
+				F4F6D715F2A52F3EC27016B3 /* StoreCardView.swift in Sources */,
+				E8032DA099A5D56FD341A143 /* StoreListView.swift in Sources */,
+				CC073A95D1E4F9E5E7E76374 /* StoreRepository.swift in Sources */,
+				E5ED6D9E8F104A3825585E66 /* UsageTracker.swift in Sources */,
+				FA980AC35CB56214FEBDCA2A /* WiFiConnector.swift in Sources */,
+				9FF7A24211D1EA69AD7876F9 /* WiFiQRCodeModal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1B4F8EEE428F34F84337465D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LouisaWiFi/Resources/LouisaWiFi.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H3XGR7SVD4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LouisaWiFi/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.zpqnzpqn.LouisaWiFi;
+				PRODUCT_NAME = "Louisa Wi-Fi";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		93A64D567705AC2CF2A5BAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		99F4572A9188BA0860457A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LouisaWiFi/Resources/LouisaWiFi.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H3XGR7SVD4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LouisaWiFi/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.zpqnzpqn.LouisaWiFi;
+				PRODUCT_NAME = "Louisa Wi-Fi";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DEFF1A276D6A8BEA7F96BD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56E2D55018EFC45C8103838C /* Build configuration list for PBXProject "LouisaWiFi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEFF1A276D6A8BEA7F96BD5B /* Debug */,
+				93A64D567705AC2CF2A5BAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		861F9A4A27F68F695FA02406 /* Build configuration list for PBXNativeTarget "LouisaWiFi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F4572A9188BA0860457A9A /* Debug */,
+				1B4F8EEE428F34F84337465D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20FB9A6F7C33EF1CFF5A441C /* Project object */;
+}
