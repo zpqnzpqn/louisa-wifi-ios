@@ -17,7 +17,7 @@
 
 iOS 系統內建的 Wi-Fi 機制有兩個硬性限制：
 1. **單一 SSID 只能記住一組密碼**：當您在 A 店連過 Wi-Fi，走到 B 店時，iPhone 會嘗試用 A 店的舊密碼連線並失敗卡住。使用者必須進入「設定 → Wi-Fi」，手動按 ⓘ 點選「忘記此網路設定」，再重新點選並手動輸入 B 店密碼。
-2. **`.mobileconfig` 描述檔無法解決**：iOS 設定描述檔（Configuration Profile）無法為同一個 SSID 指派多組不同密碼與門市規則。
+2. **`.mobileconfig` 描述檔無法解決**：iOS 設定描述檔（Configuration Profile）無法為同一個 SSID 指派多組不同密碼與門市規則，且不具備 GPS 運算邏輯。
 
 **Louisa Wi-Fi iOS 版** 結合 iPhone 的 CoreLocation 定位與 Apple 原生 `NEHotspotConfigurationManager` API，讓 iPhone 能在您抵達門市時：
 - 📍 **GPS 精準辨識**：自動計算距離您最近的門市、公尺數與地址。
@@ -50,18 +50,18 @@ flowchart TD
 
 ## 📂 專案目錄與各資料夾／檔案說明
 
-本儲存庫採用清晰分層的模組化目錄結構：
+本儲存庫採用清晰分層的模組化目錄結構，每個目錄與檔案皆具備明確職責：
 
 | 目錄 / 檔案 | 職責與用途說明 |
 | :--- | :--- |
 | **`LouisaWiFi/`** | **iOS 原生 App 核心原始碼目錄（SwiftUI 5.9+ / iOS 17+）** |
-| ├─ `App/` | App 生命週期入口點（`LouisaWiFiApp.swift`），監聽系統前背景狀態切換。 |
+| ├─ `App/` | App 生命週期入口點（`LouisaWiFiApp.swift`），監聽系統前背景狀態切換與會話結算。 |
 | ├─ `Models/` | 領域資料結構：門市資訊（`Store.swift`）、路由器記憶快取（`LearnedStoreCache.swift`）與連線時數累計（`UsageTracker.swift`）。 |
 | ├─ `Services/` | 核心系統服務：Wi-Fi 連線與 Captive Portal 驗證（`WiFiConnector.swift`）、GPS 門市測距定位（`LocationManager.swift`）與資料庫快取同步（`StoreRepository.swift`）。 |
 | ├─ `Views/` | 四大主要頁面：連線首頁（`ConnectView.swift`）、門市搜尋（`StoreListView.swift`）、連線方格圖統計（`StatsView.swift`）與設定（`SettingsView.swift`）。 |
 | ├─ `Views/Components/` | 複用 UI 組件：門市焦點卡片（`StoreCardView.swift`）、GitHub 風格連線熱度方格圖（`HeatmapGridView.swift`）與離線掃描 QR Code 視窗（`WiFiQRCodeModal.swift`）。 |
 | ├─ `Intents/` | Apple 原生捷徑與動作按鈕整合（`LouisaIntents.swift`），支援 Siri 語音呼叫。 |
-| └─ `Resources/` | 專案資源清單：應用程式圖示資產（`Assets.xcassets`）、內建門市資料庫（`stores.json`）、隱私權說明（`Info.plist`）與網路權限簽章（`LouisaWiFi.entitlements`）。 |
+| └─ `Resources/` | 專案資源清單：官方女神 Logo 圖示資產（`Assets.xcassets`）、內建門市資料庫（`stores.json`）、隱私權說明（`Info.plist`）與網路權限簽章（`LouisaWiFi.entitlements`）。 |
 | **`data/`** | **全台門市離線資料庫（`stores.json`）**，收錄全台 500+ 家門市名稱、市話、經緯度與自動推算之候選密碼清單。 |
 | **`scripts/`** | **自動化更新維護腳本（`fetch_stores.py`）**，負責每週爬取路易莎官方網站最新門市資料與推算密碼變體。 |
 | **`docs/`** | **專案文件與架構決策記錄**：包含官方視覺圖示（`icon.png`）與 `adr/`（0001、0002、0003 核心技術決策文件）。 |
@@ -164,12 +164,19 @@ cd louisa-wifi-ios
 ---
 
 ### 步驟 5：信任開發者憑證並安裝至 iPhone
+
 1. 在 Xcode 頂部工具列將執行目標選取為您的實體 **`iPhone`**。
 2. 點擊 **▶ (Run)** 或按鍵盤 `Cmd + R` 開始編譯並安裝至手機。
 3. 第一次在實機上執行時，iOS 會提示「不受信任的開發者」：
    - 請在 iPhone 上開啟「**設定 → 一般 → VPN 與裝置管理**」。
    - 在「開發者 APP」底下點選您的 Apple ID，並按下「**信任**」。
 4. 回到 iPhone 桌面打開 **Louisa Wi-Fi**，允許「**定位權限**」，大功告成！🎉
+
+#### 💡 一次設定，終身免插線（Wi-Fi 隔空安裝教學）
+插線完成首次安裝後，建議順手開啟無線除錯功能：
+1. 保持手機接線狀態，在 Xcode 頂部選單開啟 **`Window → Devices and Simulators`**（快捷鍵 `Cmd + Shift + 2`）。
+2. 在左側選取您的 iPhone，勾選右側的 **「Connect via network」**（透過網路連線）。
+3. 拔掉傳輸線！此時 Xcode 右上方依然會顯示您的 iPhone（旁邊帶有小地球/Wi-Fi 圖示）。日後只要手機與 Mac 連在同一個 Wi-Fi 下，按 `Cmd + R` 即可直接隔空將 App 編譯推送到手機上，再也不用翻找傳輸線！
 
 ---
 
@@ -201,9 +208,30 @@ cd louisa-wifi-ios
 
 ---
 
-## 🤖 GitHub Actions 每週自動更新
+## 🤖 GitHub Actions 雲端自動更新門市
 
-本儲存庫配置了 `.github/workflows/update-stores.yml`，每週一定期執行 `scripts/fetch_stores.py` 爬取官方最新門市與座標，並自動更新儲存庫中的 `data/stores.json`。App 使用者隨時可在設定中點選「立即同步」取得最新門市清單。
+本儲存庫配置了全自動化的 [`.github/workflows/update-stores.yml`](.github/workflows/update-stores.yml)，專門負責維持全台門市資料庫的最新狀態。
+
+### 1. 每週固定排程（全自動，電腦不需開機）
+- **定時排程**：`cron: '0 2 * * 1'`（每週一 UTC 02:00，即台灣時間每週一上午 10:00）。
+- **自動運行**：GitHub 雲端主機會自動喚醒並執行爬蟲腳本 [`scripts/fetch_stores.py`](scripts/fetch_stores.py)，抓取路易莎官網最新門市與座標。若資料有變更，自動以 `github-actions[bot]` 身份將新資料提交推送至儲存庫。
+
+### 2. 隨時手動觸發更新（支援網頁與終端機）
+如果您想立即手動更新資料庫：
+- **方式 A（網頁端）**：
+  1. 開啟儲存庫首頁，點擊頂部的 **「Actions」** 標籤。
+  2. 在左側選取 **「Update Stores Data」** 工作流。
+  3. 點選右側的 **「Run workflow」** 下拉選單並按下綠色按鈕，約 20 秒內自動完成更新！
+- **方式 B（GitHub CLI 指令）**：
+  ```bash
+  gh workflow run update-stores.yml
+  ```
+
+### 3. iPhone App 端的無感熱更新（免重新編譯）
+當 GitHub 儲存庫上的 `data/stores.json` 更新後，使用者完全不需要重新打包安裝 App：
+- 打開 iPhone 上的 **Louisa Wi-Fi** App。
+- 進入 **「設定」** 頁籤，點擊 **「立即從 GitHub 同步最新門市」**。
+- App 會自動自 GitHub Raw 下載最新門市清單並寫入手機快取，即使人在外面也能立即連上剛開幕的新門市！
 
 ---
 
