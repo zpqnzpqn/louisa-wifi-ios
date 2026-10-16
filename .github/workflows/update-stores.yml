@@ -1,0 +1,39 @@
+name: Update Stores Data
+
+on:
+  schedule:
+    # Run every Monday at 02:00 UTC (10:00 AM Taipei time)
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stores:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run store scraper script
+        run: |
+          python3 scripts/fetch_stores.py
+          cp data/stores.json LouisaWiFi/Resources/stores.json
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/stores.json LouisaWiFi/Resources/stores.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(data): 🤖 自動更新全台路易莎門市資料庫 [skip ci]"
+            git push
+          else
+            echo "門市資料無異動，跳過提交。"
+          fi
